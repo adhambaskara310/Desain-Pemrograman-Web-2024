@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Form Data Mahasiswa</title>
+</head>
+
+<body>
+    <h4>Data Mahasiswa</h4>
+
+    Nama:<br>
+    <input type="text" name="nama"><br><br>
+
+    Email:<br>
+    <input type="email" name="email"><br><br>
+
+    Tanggal Lahir:<br>
+    <input type="text" name="tgl-lahir" placeholder="dd/mm/yyyy"><br><br>
+
+    Jenis Kelamin:<br>
+    <select name="jenis-kelamin">
+        <option value="laki-laki">Laki-Laki</option>
+        <option value="perempuan">Perempuan</option>
+    </select><br><br>
+
+    Alamat:<br>
+    <textarea name="alamat" rows="4" cols="50"></textarea><br><br>
+
+    <h4>Komentar</h4>
+
+    <!-- Sumber Informasi -->
+    Dari mana Anda mengetahui buku ini?<br>
+    <select name="sumber-info">
+        <option value="google">Google</option>
+        <option value="teman">Teman</option>
+        <option value="media">Media Sosial</option>
+    </select><br><br>
+
+    <!-- Penilaian Buku -->
+    Bagaimana menurut Anda terhadap buku ini?<br>
+    <input type="radio" name="penilaian" value="biasa"> Biasa<br>
+    <input type="radio" name="penilaian" value="bagus"> Bagus<br>
+    <input type="radio" name="penilaian" value="menarik"> Menarik<br><br>
+
+    <!-- Komentar Anda -->
+    Komentar Anda:<br>
+    <textarea name="komentar" rows="4" cols="50"></textarea><br><br>
+
+    <!-- Kirim Info Terbaru -->
+    <input type="checkbox" name="kirim-email"> Kirim ke Email bila ada info terbaru<br><br>
+
+    <!-- Submit -->
+    <input type="submit" value="Kirim">
+</body>
+</html>
