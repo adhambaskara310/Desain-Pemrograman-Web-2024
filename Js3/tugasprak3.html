@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Praktikum 3</title>
+    <style>
+        .form-group {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            width: 120px;
+        }
+        .form-group input {
+            width: 200px; 
+        }
+    </style>
+    <script>
+        function cekFormulir() {
+            var namaDepan = document.forms["formNama"]["firstName"].value;
+            var namaBelakang = document.forms["formNama"]["lastName"].value;
+            if (namaDepan == "" || namaBelakang == "") {
+                alert("Isikan nama depan dan belakang");
+                return false;
+            }
+            document.getElementById("hasil").innerHTML = "Nama: " + namaDepan + " " + namaBelakang;
+            return false; 
+        }
+    </script>
+</head>
+<body>
+    <form name="formNama" onsubmit="return cekFormulir()">
+        <div class="form-group">
+            <label for="firstName">Nama Depan:</label>
+            <input type="text" id="firstName" name="firstName">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Nama Belakang:</label>
+            <input type="text" id="lastName" name="lastName">
+        </div>
+        <input type="submit" value="Kirim">
+    </form>
+
+    <div id="hasil"></div>
+</body>
+</html>
