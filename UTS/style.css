@@ -1,0 +1,141 @@
+/* Mengatur margin dan padding menjadi 0 untuk elemen body dan html, serta menghilangkan overflow */
+body, html {
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Style untuk video latar belakang agar menutupi seluruh layar */
+.background-video {
+    position: absolute; /* Memastikan video berada di posisi absolut di dalam body */
+    top: 50%; /* Memposisikan 50% dari atas halaman */
+    left: 50%; /* Memposisikan 50% dari kiri halaman */
+    width: 100vw; /* Mengatur lebar video sesuai lebar layar/viewport */
+    height: 100vh; /* Mengatur tinggi video sesuai tinggi layar/viewport */
+    object-fit: cover; /* Menjaga rasio video agar pas di dalam viewport */
+    transform: translate(-50%, -50%); /* Pusatkan video secara sempurna */
+    z-index: -1; /* Pastikan video ada di belakang elemen lainnya */
+    overflow: hidden; /* Menyembunyikan bagian video yang berada di luar area */
+}
+
+/* Container untuk header yang berisi gambar di tengah */
+.container {
+    display: flex;
+    justify-content: center; /* Pusatkan gambar secara horizontal */
+    align-items: center; /* Pusatkan gambar secara vertikal */
+    margin-top: 25px; /* Memberi jarak dari atas */
+}
+
+/* Style untuk judul dan teks di bagian "Tentang saya" */
+.boxundertext .abtme {
+    color: black;
+    opacity: 80%; /* Memberi efek transparansi pada teks */
+}
+
+/* Style untuk teks di bawah "Tentang saya" */
+.boxundertext .belowabtme {
+    color: black;
+    opacity: 80%; /* Memberi efek transparansi pada teks */
+}
+
+/* Style untuk bagian alamat */
+.boxundertext .address-grid {
+    color: black;
+    opacity: 80%; /* Memberi efek transparansi pada teks */
+}
+
+/* Section untuk memberi margin antara elemen */
+section {
+    margin: 50px 0; /* Menambahkan margin atas dan bawah */
+}
+
+/* Ukuran font untuk elemen h2 */
+h2 {
+    font-size: 2em; /* Ukuran font yang lebih besar untuk judul */
+    margin-bottom: 20px; /* Memberikan jarak bawah */
+}
+
+/* Menghilangkan bullet point di daftar list */
+ul {
+    list-style: none;
+    padding: 0; /* Menghilangkan padding default */
+}
+
+/* Memberi margin bawah pada setiap item di dalam list */
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Style untuk box di bawah teks, yang berisi konten "Tentang saya" */
+.boxundertext {
+    border: 0.5px solid; /* Memberikan border tipis */
+    border-color: #dce0d9; /* Warna border abu-abu muda */
+    border-radius: 10px; /* Membuat sudut border membulat */
+    padding: 20px; /* Jarak bagian dalam elemen */
+    margin: 0 auto; /* Pusatkan elemen secara horizontal */
+    margin-top: 20px; /* Memberikan jarak dari atas */
+    width: 80%; /* Lebar elemen 80% dari layar */
+    background-color: #f5f7fa; /* Background putih pucat */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Memberi bayangan pada kotak */
+}
+
+/* Style untuk item yang aktif di list contact menggunakan Bootstrap */
+.boxundertext .list-group-item.active {
+    background-color: #d62828; /* Warna latar belakang biru */
+    color: white; /* Warna teks putih */
+}
+
+/* Style untuk bagian feedback form */
+.feedback-section {
+    margin-top: 20px; /* Memberikan jarak atas pada form */
+}
+
+/* Style untuk label pada form feedback */
+.boxundertext .feedback-section label {
+    display: block; /* Membuat label tampil sebagai blok */
+    margin-bottom: 10px; /* Memberikan jarak bawah */
+    font-size: 1.2em; /* Ukuran font lebih besar */
+}
+
+/* Style untuk textarea di form feedback */
+.boxundertext .feedback-section textarea {
+    width: 100%; /* Membuat textarea mengambil lebar penuh */
+    padding: 10px; /* Memberikan jarak dalam */
+    border: 1px solid #ccc; /* Border berwarna abu-abu muda */
+    border-radius: 5px; /* Membulatkan sudut */
+    font-size: 1em; /* Ukuran font standar */
+    resize: none; /* Mencegah pengguna untuk merubah ukuran textarea */
+}
+
+/* Style untuk tombol submit di form feedback */
+.boxundertext .feedback-section .submit-btn {
+    margin-top: 10px; /* Memberikan jarak atas */
+    padding: 10px 20px; /* Ukuran padding dalam tombol */
+    background-color: #d62828; /* Warna latar belakang biru */
+    color: white; /* Warna teks putih */
+    border: none; /* Menghilangkan border default */
+    border-radius: 5px; /* Membulatkan sudut tombol */
+    cursor: pointer; /* Mengubah kursor menjadi tangan saat hover */
+}
+
+/* Mengubah warna latar belakang tombol saat dihover */
+.boxundertext .feedback-section .submit-btn:hover {
+    background-color: #1446a0; /* Warna biru yang lebih gelap */
+}
+
+/* Style untuk pesan 'terima kasih' di feedback form */
+.boxundertext .feedback-section thank-you-message {
+    color: black; /* Warna teks pesan terima kasih */
+}
+
+/* Style untuk footer */
+footer {
+    color: white; /* Warna teks putih */
+    text-align: center; /* Pusatkan teks di tengah */
+    margin-top: 40px; /* Memberikan jarak atas */
+}
+
+/* Style untuk teks paling bawah di footer */
+.tekspalingbawah {
+    margin-top: 100px; /* Memberikan jarak atas */
+}
