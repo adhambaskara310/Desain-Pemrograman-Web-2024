@@ -1,10 +1,10 @@
 <?php
 // Koneksi ke database
-$servername = "DESKTOP-8H0SDKA\SQLEXPRESS"; // Ganti dengan nama server Anda jika diperlukan
+$servername = "DESKTOP-8H0SDKA\SQLEXPRESS";
 $dbname = "kontak_db";
-$username = ""; // Ganti dengan username Anda
-$password = ""; // Ganti dengan password Anda jika ada
-// Ganti dengan nama database Anda
+$username = "";
+$password = "";
+
 
 $connectionOptions = array(
     "Database" => $dbname,
@@ -15,7 +15,6 @@ $connectionOptions = array(
 // Buat koneksi
 $conn = sqlsrv_connect($servername, $connectionOptions);
 
-// Cek koneksi
 // Cek koneksi
 if ($conn === false) {
     die(print_r(sqlsrv_errors(), true));
@@ -57,8 +56,8 @@ if (sqlsrv_has_rows($result)) {
             </tr>";
     while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
         echo "<tr>
-                <td>" . htmlspecialchars($row['nama']) . "</td>
-                <td>" . htmlspecialchars($row['nomor_telepon']) . "</td>
+                <td>" . htmlspecialchars(string: $row['nama']) . "</td>
+                <td>" . htmlspecialchars(string: $row['nomor_telepon']) . "</td>
                 <td>
                     <a href='update.php?nomor_telepon=" . urlencode($row['nomor_telepon']) . "'>Edit</a> | 
                     <a href='delete.php?nomor_telepon=" . urlencode($row['nomor_telepon']) . "' onclick='return confirm(\"Apakah Anda yakin ingin menghapus kontak ini?\")'>Hapus</a>
@@ -70,7 +69,6 @@ if (sqlsrv_has_rows($result)) {
     echo "<p>Tidak ada kontak yang ditemukan.</p>";
 }
 
-    sqlsrv_close($conn);
     ?>
 </body>
 </html>

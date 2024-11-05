@@ -36,6 +36,4 @@ if (isset($_GET['nomor_telepon'])) {
     }
 }
 
-// Tutup koneksi
-sqlsrv_close($conn);
 ?>
